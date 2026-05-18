@@ -16,12 +16,12 @@ use Sulu\Component\Security\Authorization\SecurityCheckerInterface;
 
 final class TranslationsAdmin extends Admin
 {
-    final public const SECURITY_CONTEXT = 'phpro_translations';
-    private const SECURITY_CONTEXT_GROUP = 'Settings';
-    final public const LIST_KEY = 'phpro_translations_list';
-    private const FORM_KEY = 'phpro_translations_form';
-    private const LIST_VIEW = 'phpro_translations_list_view';
-    private const EDIT_FORM_VIEW = 'phpro_translations_form_view';
+    final public const string SECURITY_CONTEXT = 'phpro_translations';
+    private const string SECURITY_CONTEXT_GROUP = 'Settings';
+    final public const string LIST_KEY = 'phpro_translations_list';
+    private const string FORM_KEY = 'phpro_translations_form';
+    private const string LIST_VIEW = 'phpro_translations_list_view';
+    private const string EDIT_FORM_VIEW = 'phpro_translations_form_view';
 
     public function __construct(
         private readonly ViewBuilderFactoryInterface $viewBuilderFactory,

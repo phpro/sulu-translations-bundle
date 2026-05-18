@@ -14,7 +14,7 @@ use function Psl\Vec\map;
 
 final class TranslationTable
 {
-    public const NAME = 'phpro_translations';
+    public const string NAME = 'phpro_translations';
 
     public static function name(): string
     {
