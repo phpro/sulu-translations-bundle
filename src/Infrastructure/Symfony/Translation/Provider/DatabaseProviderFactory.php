@@ -12,8 +12,8 @@ use Symfony\Component\Translation\Provider\Dsn;
 
 final class DatabaseProviderFactory extends AbstractProviderFactory
 {
-    public const PROVIDER_NAME = 'phpro_database';
-    public const PROVIDER_DSN_SCHEME = 'database';
+    public const string PROVIDER_NAME = 'phpro_database';
+    public const string PROVIDER_DSN_SCHEME = 'database';
 
     public function __construct(
         private readonly Writer $writer,

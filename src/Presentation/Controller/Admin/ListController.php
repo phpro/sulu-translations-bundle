@@ -18,7 +18,7 @@ use function Psl\Type\int;
 #[Route(path: '/translations', name: 'phpro.translations_list', options: ['expose' => true], methods: ['GET'])]
 final class ListController extends AbstractSecuredTranslationsController implements SecuredControllerInterface
 {
-    public const RESOURCE_KEY = 'phpro_translations';
+    public const string RESOURCE_KEY = 'phpro_translations';
 
     public function __construct(
         private readonly SerializerInterface $serializer,
@@ -50,7 +50,7 @@ final class ListController extends AbstractSecuredTranslationsController impleme
         $listRepresentation = new PaginatedRepresentation(
             $translationsResult->translationCollection(),
             self::RESOURCE_KEY,
-            (int) $this->listRestHelper->getPage(),
+            int()->coerce($this->listRestHelper->getPage()),
             $limit,
             $translationsResult->totalCount(),
         );
